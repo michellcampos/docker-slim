@@ -6,7 +6,8 @@ RUN apt-get upgrade -y
 RUN apt-get -y install apache2 php5 php5-cli php5-mysql curl vim supervisor
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN cd /var/www/html && composer require slim/slim "^3.0"
+RUN cd /var/www/html 
+RUN composer require slim/slim "^3.0"
 
 RUN rm -rf /var/www/html/index.html
 
